@@ -1,0 +1,170 @@
+---
+format: 
+  revealjs:
+    theme: [default, style.scss]
+    slide-number: false
+    menu: false
+    width: 1280
+    height: 720
+editor: visual
+---
+
+##  {background-image="logos/title_partial.PNG"}
+
+::: columns
+::: {.column width="80%"}
+<h1 style="color: #8ecae6;"> Title Slide </h1>
+
+<text class="point" style="color: #8ecae6;"> Subtitle: </text>
+
+<text style="color: #8ecae6;"> Author: </text>
+
+![](logos/measr-hex.png){.absolute left="0" width="300" height="300"}
+:::
+::: {.column width="10%"}
+:::
+::: {.column width="10%"}
+<text style="color: black; font-size: 20pt;"> `r format(Sys.time(), "%d/%m/%y")` </text>
+:::
+:::
+
+## Title and Content (Footer) {background-image="logos/footer_image.PNG"}
+
+-   Titles: 32pt Minimum- Playfair Display (Headings)
+-   Subtitles: 30pt min- Open Sans (Body)
+-   Text: 28pt minimum- Open Sans (Body)
+
+## Title and Content (No Footer)
+
+You can **bold** words this way
+
+You can *italicize* words this way
+
+::: fragment
+Make text or images appear this way
+:::
+
+## Just Title
+
+## Column Layout {background-image="logos/footer_image.PNG"}
+
+Content that can go across both sides of the slide
+
+::: columns
+::: {.column width="45%"}
+#### Start of the left column
+
+-   Point 1
+-   Point 2
+-   Point 3
+:::
+
+::: {.column width="10%"}
+:::
+
+::: {.column width="45%"}
+#### Start of the right column
+
+-   Point 1
+-   Point 2
+-   Point 3
+:::
+:::
+
+## {background-image="logos/section_header.PNG"}
+
+![](logos/measr-hex.png){.absolute top="150" right="80" width="400" height="400"}
+
+<section class="center" data-background="linear-gradient(90deg, white 50%, #023047 50%)">
+
+::: columns
+::: {.column width="45%"}
+<h3> Insert Header </h3>
+Insert Contact Info
+:::
+:::
+
+</section>
+
+## {background-image="logos/section_header_slant.PNG"}
+
+<section class="center">
+
+::: columns
+::: {.column width="80%"}
+<h1> Insert Header </h1>
+:::
+:::
+
+</section>
+
+## Tabsets {.smaller .scrollable transition="slide"}
+
+::: panel-tabset
+### Plot
+
+```{r}
+library(ggplot2)
+ggplot(mtcars, aes(hp, mpg, color = am)) +
+  geom_point() +  geom_smooth(formula = y ~ x, method = "loess")
+```
+
+### Data
+
+```{r}
+knitr::kable(mtcars)
+```
+:::
+
+## Absolute Position
+
+Position images or other elements at precise locations
+
+![](logos/measr-hex.png){.absolute .fragment top="170" left="30" width="400" height="400"}
+
+![](logos/measr-letterhead.png){.absolute .fragment top="150" right="80" width="450"}
+
+![](logos/measr-opengraph.png){.absolute .fragment bottom="110" right="130" width="300"}
+
+## Line Highlighting
+
+-   Highlight specific lines for emphasis
+-   Incrementally highlight additional lines
+
+``` {.python code-line-numbers="4-5|7|10"}
+import numpy as np
+import matplotlib.pyplot as plt
+r = np.arange(0, 2, 0.01)
+theta = 2 * np.pi * r
+fig, ax = plt.subplots(subplot_kw={'projection': 'polar'})
+ax.plot(theta, r)
+ax.set_rticks([0.5, 1, 1.5, 2])
+ax.grid(True)
+plt.show()
+```
+
+## Preview Links
+
+Navigate to hyperlinks without disrupting the flow of your presentation.
+
+Use the `preview-links` option to open links in an iframe on top of your slides. Try clicking the link below for a demonstration:
+
+::: {style="text-align: center; margin-top: 1em"}
+[Matplotlib: Visualization with Python](https://matplotlib.org/){preview-link="true" style="text-align: center"}
+:::
+
+## Column Layout {background-image="logos/footer_image.PNG"}
+
+Useful Quick Commands
+
+- "F" for full screen (Press the "escape" button to get out of full screen view)
+- "N" for next slide and "P" for previous slide
+- "O" for slide overview
+- "S" for speaker view (this will create a new window)
+- "M" for menu 
+
+::: {.notes}
+View slide in speaker view to see these notes. 
+:::
+
+
